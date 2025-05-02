@@ -1,4 +1,4 @@
 # Zip Market
 
-My E-commerce App
+My e-Commerce App
 
