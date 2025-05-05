@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:zip_market/features/authentication/screens.onboarding/onboarding.dart';
 
 import 'utils/theme/theme.dart';
 
@@ -7,15 +9,12 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       themeMode: ThemeMode.system,
       theme: ZMAppTheme.lightTheme,
       darkTheme: ZMAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Zip Market')),
-        body: const Center(child: Text('Zip Market Home Page')),
-      ),
+      home: OnboardingScreen(),
     );
   }
 }

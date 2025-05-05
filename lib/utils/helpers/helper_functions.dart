@@ -80,15 +80,15 @@ class ZMHelperFunctions {
   }
 
   static Size screenSize() {
-    return MediaQuery.of(Get.context!).size;
+    return MediaQuery.sizeOf(Get.context!);
   }
 
   static double screenHeight() {
-    return MediaQuery.of(Get.context!).size.height;
+    return MediaQuery.sizeOf(Get.context!).height;
   }
 
   static double screenWidth() {
-    return MediaQuery.of(Get.context!).size.width;
+    return MediaQuery.sizeOf(Get.context!).width;
   }
 
   static String getFormattedDate(
