@@ -11,6 +11,11 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: ZMAppTheme.lightTheme,
       darkTheme: ZMAppTheme.darkTheme,
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Zip Market')),
+        body: const Center(child: Text('Zip Market Home Page')),
+      ),
     );
   }
 }
