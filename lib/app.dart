@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zip_market/features/authentication/screens.onboarding/onboarding.dart';
+import 'package:zip_market/features/authentication/screens/onboarding.dart';
 
 import 'utils/theme/theme.dart';
 
