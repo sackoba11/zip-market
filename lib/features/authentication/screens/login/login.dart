@@ -24,10 +24,10 @@ class LoginScreen extends StatelessWidget {
               LoginHeader(),
 
               //form
-              LoginForm(),  
+              LoginForm(),
 
               //Or Divider
-              FormDivider(dividerText: ZMTexts.orSignInWith.capitalize!),
+              ZMFormDivider(dividerText: ZMTexts.orSignInWith.capitalize!),
               const SizedBox(height: ZMSizes.spaceBtwInputFields),
 
               //Social Media Buttons
