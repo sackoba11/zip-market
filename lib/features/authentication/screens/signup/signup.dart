@@ -25,10 +25,10 @@ class SignupScreen extends StatelessWidget {
                 ZMTexts.signupTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
-
+              const SizedBox(height: ZMSizes.spaceBtwSections),
               // form
               const ZMSignupForm(),
-
+              SizedBox(height: ZMSizes.spaceBtwSections),
               //Divider
               ZMFormDivider(dividerText: ZMTexts.orSignUpWith.capitalize!),
               const SizedBox(height: ZMSizes.spaceBtwSections),

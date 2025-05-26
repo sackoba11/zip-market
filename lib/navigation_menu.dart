@@ -37,7 +37,7 @@ class NavigationMenu extends StatelessWidget {
       body: Obx(() => controller.screens[controller.selectedIndex.value]),
     );
   }
-}
+} 
 
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;

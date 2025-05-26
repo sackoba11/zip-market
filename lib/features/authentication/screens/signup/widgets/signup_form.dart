@@ -38,7 +38,7 @@ class ZMSignupForm extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(width: ZMSizes.spaceBtwInputFields),
+          const SizedBox(height: ZMSizes.spaceBtwInputFields),
           //UserName
           TextFormField(
             expands: false,
@@ -47,7 +47,7 @@ class ZMSignupForm extends StatelessWidget {
               prefixIcon: Icon(Iconsax.user_edit),
             ),
           ),
-
+          const SizedBox(height: ZMSizes.spaceBtwInputFields),
           //Email
           TextFormField(
             decoration: const InputDecoration(
@@ -56,7 +56,7 @@ class ZMSignupForm extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(width: ZMSizes.spaceBtwInputFields),
+          const SizedBox(height: ZMSizes.spaceBtwInputFields),
           //Phone Number
           TextFormField(
             decoration: const InputDecoration(
@@ -64,7 +64,7 @@ class ZMSignupForm extends StatelessWidget {
               prefixIcon: Icon(Iconsax.call),
             ),
           ),
-          const SizedBox(width: ZMSizes.spaceBtwInputFields),
+          const SizedBox(height: ZMSizes.spaceBtwInputFields),
 
           //Password
           TextFormField(
@@ -75,7 +75,7 @@ class ZMSignupForm extends StatelessWidget {
               suffixIcon: Icon(Iconsax.eye_slash),
             ),
           ),
-          const SizedBox(width: ZMSizes.spaceBtwInputFields),
+          const SizedBox(height: ZMSizes.spaceBtwInputFields),
 
           //Terms and condition CheckBox
           ZMTermsAndConditionCheckBox(),

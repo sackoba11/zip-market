@@ -21,31 +21,40 @@ class ZMTermsAndConditionCheckBox extends StatelessWidget {
         const SizedBox(width: ZMSizes.spaceBtwItems),
 
         Text.rich(
+          overflow: TextOverflow.clip,
           TextSpan(
             children: [
               TextSpan(
                 text: '${ZMTexts.iAgreeTo} ',
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(
+                  context,
+                ).textTheme.bodySmall!.copyWith(fontSize: 12),
               ),
               TextSpan(
                 text: '${ZMTexts.privacyPolicy} ',
-                style: Theme.of(context).textTheme.bodyMedium!.apply(
-                  color: dark ? ZMColors.white : ZMColors.primary,
-                  decoration: TextDecoration.underline,
-                  decorationColor: dark ? ZMColors.white : ZMColors.primary,
-                ),
+                style: Theme.of(context).textTheme.bodyMedium!
+                    .apply(
+                      color: dark ? ZMColors.white : ZMColors.primary,
+                      decoration: TextDecoration.underline,
+                      decorationColor: dark ? ZMColors.white : ZMColors.primary,
+                    )
+                    .copyWith(fontSize: 12),
               ),
               TextSpan(
                 text: '${ZMTexts.and} ',
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(
+                  context,
+                ).textTheme.bodySmall!.copyWith(fontSize: 12),
               ),
               TextSpan(
                 text: ZMTexts.termsOfUse,
-                style: Theme.of(context).textTheme.bodyMedium!.apply(
-                  color: dark ? ZMColors.white : ZMColors.primary,
-                  decoration: TextDecoration.underline,
-                  decorationColor: dark ? ZMColors.white : ZMColors.primary,
-                ),
+                style: Theme.of(context).textTheme.bodyMedium!
+                    .apply(
+                      color: dark ? ZMColors.white : ZMColors.primary,
+                      decoration: TextDecoration.underline,
+                      decorationColor: dark ? ZMColors.white : ZMColors.primary,
+                    )
+                    .copyWith(fontSize: 12),
               ),
             ],
           ),
