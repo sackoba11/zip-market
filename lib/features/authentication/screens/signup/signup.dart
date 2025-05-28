@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zip_market/common/widgets/social_buttons.dart';
+import 'package:zip_market/common/widgets/login_signup/social_buttons.dart';
 import 'package:zip_market/utils/constants/text_strings.dart';
 
-import '../../../../common/widgets/form_divider.dart';
+import '../../../../common/widgets/login_signup/form_divider.dart';
 import '../../../../utils/constants/sizes.dart';
 import 'widgets/signup_form.dart';
 
