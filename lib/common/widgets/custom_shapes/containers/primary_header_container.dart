@@ -31,6 +31,7 @@ class ZMPrimaryHeaderContainer extends StatelessWidget {
                   backgoundColor: ZMColors.textWhite.withOpacity(0.1),
                 ),
               ),
+              child,
             ],
           ),
         ),
