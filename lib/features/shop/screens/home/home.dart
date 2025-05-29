@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
+import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 import 'widgets/home_appbar.dart';
+import 'widgets/home_categories.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,7 +25,7 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: ZMSizes.spaceBtwSections),
 
                   /// Searchbar
-                  ZMSearchContainer(text: 'Search in Store'),
+                  ZMSearchContainer(text: 'Search in Store', onTap: () {}),
                   SizedBox(height: ZMSizes.spaceBtwSections),
 
                   /// Categories
@@ -35,10 +37,12 @@ class HomeScreen extends StatelessWidget {
                         ZMSectionHeading(
                           title: 'Popular Categories',
                           showActionButton: false,
+                          textolor: ZMColors.white,
                         ),
                         SizedBox(height: ZMSizes.spaceBtwItems),
 
                         /// Categories
+                        ZMHomeCategories(),
                       ],
                     ),
                   ),

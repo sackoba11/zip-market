@@ -13,36 +13,41 @@ class ZMSearchContainer extends StatelessWidget {
     this.icon = Iconsax.search_normal,
     this.showBackground = true,
     this.showBorder = true,
+    this.onTap,
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
+  final VoidCallback? onTap;
   @override
   Widget build(BuildContext context) {
     final dark = ZMHelperFunctions.isDarkMode(context);
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: ZMSizes.defaultSpace),
-      child: Container(
-        width: ZMDeviceUtils.getScreenWidth(context),
-        padding: EdgeInsets.all(ZMSizes.md),
-        decoration: BoxDecoration(
-          color:
-              showBackground
-                  ? dark
-                      ? ZMColors.dark
-                      : ZMColors.light
-                  : Colors.transparent,
-          borderRadius: BorderRadius.circular(ZMSizes.cardRadiusLg),
-          border: showBorder ? Border.all(color: ZMColors.grey) : null,
-        ),
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: ZMSizes.defaultSpace),
+        child: Container(
+          width: ZMDeviceUtils.getScreenWidth(context),
+          padding: EdgeInsets.all(ZMSizes.md),
+          decoration: BoxDecoration(
+            color:
+                showBackground
+                    ? dark
+                        ? ZMColors.dark
+                        : ZMColors.light
+                    : Colors.transparent,
+            borderRadius: BorderRadius.circular(ZMSizes.cardRadiusLg),
+            border: showBorder ? Border.all(color: ZMColors.grey) : null,
+          ),
 
-        child: Row(
-          children: [
-            Icon(icon, color: ZMColors.darkGrey),
-            const SizedBox(width: ZMSizes.spaceBtwItems),
-            Text(text, style: Theme.of(context).textTheme.bodySmall),
-          ],
+          child: Row(
+            children: [
+              Icon(icon, color: ZMColors.darkGrey),
+              const SizedBox(width: ZMSizes.spaceBtwItems),
+              Text(text, style: Theme.of(context).textTheme.bodySmall),
+            ],
+          ),
         ),
       ),
     );
