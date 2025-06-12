@@ -11,6 +11,7 @@ class ZMCirlcularContainer extends StatelessWidget {
     this.padding = 0,
     this.child,
     this.backgoundColor = ZMColors.white,
+    this.margin,
   });
 
   final double? width;
@@ -18,12 +19,14 @@ class ZMCirlcularContainer extends StatelessWidget {
   final double radius;
   final double padding;
   final Widget? child;
+  final EdgeInsets? margin;
   final Color? backgoundColor;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: height,
       width: width,
+      margin: margin,
       padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radius),

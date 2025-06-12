@@ -4,9 +4,11 @@ import '../../../../common/widgets/custom_shapes/containers/primary_header_conta
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
 import 'widgets/home_appbar.dart';
 import 'widgets/home_categories.dart';
+import 'widgets/promo_slider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -46,6 +48,18 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                ],
+              ),
+            ),
+
+            /// Body
+            Padding(
+              padding: const EdgeInsets.all(ZMSizes.defaultSpace),
+              child: PromoSlider(
+                banners: [
+                  ZMImages.promoBanner1,
+                  ZMImages.promoBanner2,
+                  ZMImages.promoBanner3,
                 ],
               ),
             ),
