@@ -14,19 +14,21 @@ class ZMSearchContainer extends StatelessWidget {
     this.showBackground = true,
     this.showBorder = true,
     this.onTap,
+    this.padding = const EdgeInsets.symmetric(horizontal: ZMSizes.defaultSpace),
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
   final VoidCallback? onTap;
+  final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) {
     final dark = ZMHelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: ZMSizes.defaultSpace),
+        padding: padding,
         child: Container(
           width: ZMDeviceUtils.getScreenWidth(context),
           padding: EdgeInsets.all(ZMSizes.md),

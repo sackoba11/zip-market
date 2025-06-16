@@ -4,6 +4,7 @@ import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:zip_market/utils/helpers/helper_functions.dart';
 
 import 'features/shop/screens/home/home.dart';
+import 'features/shop/screens/store/store.dart';
 import 'utils/constants/colors.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -37,14 +38,14 @@ class NavigationMenu extends StatelessWidget {
       body: Obx(() => controller.screens[controller.selectedIndex.value]),
     );
   }
-} 
+}
 
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
     HomeScreen(),
-    Container(color: Colors.purple),
+    StoreScreen(),
     Container(color: Colors.orange),
     Container(color: Colors.blue),
   ];

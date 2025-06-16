@@ -11,6 +11,7 @@ import '../../../../utils/constants/sizes.dart';
 import '../../custom_shapes/containers/rounded_container.dart';
 import '../../icons/circular_icon.dart';
 import '../../images/rounded_image.dart';
+import '../../texts/brand_title_text_with_verified_icon.dart';
 
 class ProductCardVertical extends StatelessWidget {
   const ProductCardVertical({super.key});
@@ -87,49 +88,36 @@ class ProductCardVertical extends StatelessWidget {
                     smallSize: true,
                   ),
                   const SizedBox(height: ZMSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: ZMSizes.xs),
-                      Icon(
-                        Iconsax.verify,
-                        color: ZMColors.primary,
-                        size: ZMSizes.iconXs,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      //Price
-                      ProductPriceText(price: '34.7'),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: ZMColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(ZMSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(
-                              ZMSizes.productImageRadius,
-                            ),
-                          ),
-                        ),
-                        child: SizedBox(
-                          width: ZMSizes.iconLg * 1.2,
-                          height: ZMSizes.iconLg * 1.2,
-                          child: Center(
-                            child: Icon(Iconsax.add, color: ZMColors.white),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  ZMBrandTitleWithVerifiedIcon(title: 'Nike'),
                 ],
               ),
+            ),
+            Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //Price
+                Padding(
+                  padding: const EdgeInsets.only(left: ZMSizes.sm),
+                  child: ProductPriceText(price: '34.7'),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: ZMColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(ZMSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(ZMSizes.productImageRadius),
+                    ),
+                  ),
+                  child: SizedBox(
+                    width: ZMSizes.iconLg * 1.2,
+                    height: ZMSizes.iconLg * 1.2,
+                    child: Center(
+                      child: Icon(Iconsax.add, color: ZMColors.white),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

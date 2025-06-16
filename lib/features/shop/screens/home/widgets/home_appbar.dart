@@ -6,9 +6,7 @@ import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/text_strings.dart';
 
 class ZMHomeAppBar extends StatelessWidget {
-  const ZMHomeAppBar({
-    super.key,
-  });
+  const ZMHomeAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,17 +22,13 @@ class ZMHomeAppBar extends StatelessWidget {
           ),
           Text(
             ZMTexts.homeAppbarSubTitle,
-            style: Theme.of(context).textTheme.headlineSmall!
-                .apply(color: ZMColors.white),
+            style: Theme.of(
+              context,
+            ).textTheme.headlineSmall!.apply(color: ZMColors.white),
           ),
         ],
       ),
-      actions: [
-        ZMCartCounterIcon(
-          onPressed: () {},
-          iconColor: ZMColors.white,
-        ),
-      ],
+      actions: [ZMCartCounterIcon(onPressed: () {})],
     );
   }
 }

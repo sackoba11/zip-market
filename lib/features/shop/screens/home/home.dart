@@ -68,6 +68,9 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: ZMSizes.spaceBtwSections),
+                  // Heading
+                  ZMSectionHeading(title: 'Popular Products', onPressed: () {}),
+                  const SizedBox(height: ZMSizes.spaceBtwItems),
 
                   ///Popular Product
                   GridLayout(
