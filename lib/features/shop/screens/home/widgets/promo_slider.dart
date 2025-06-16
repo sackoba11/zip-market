@@ -16,8 +16,9 @@ class PromoSlider extends StatelessWidget {
     return Column(
       children: [
         CarouselView(
-          itemExtent: 1,
-          children: banners.map((url) => RoundedImage(imageUrl: url)).toList(),
+          itemExtent: 0.8,
+          children:
+              banners.map((url) => ZMRoundedImage(imageUrl: url)).toList(),
         ),
         //TODO: install CarouselSlider package
 

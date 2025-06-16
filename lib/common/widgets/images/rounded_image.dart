@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 
-class RoundedImage extends StatelessWidget {
-  const RoundedImage({
+class ZMRoundedImage extends StatelessWidget {
+  const ZMRoundedImage({
     super.key,
     this.width,
     this.height,
