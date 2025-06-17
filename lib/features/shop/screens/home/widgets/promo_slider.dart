@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zip_market/features/shop/controllers/home_controller.dart';
@@ -15,19 +16,13 @@ class PromoSlider extends StatelessWidget {
     final controller = Get.put(HomeController());
     return Column(
       children: [
-        CarouselView(
-          itemExtent: 0.8,
-          children:
-              banners.map((url) => ZMRoundedImage(imageUrl: url)).toList(),
+        CarouselSlider(
+          options: CarouselOptions(
+            viewportFraction: 1,
+            onPageChanged: (index, _) => controller.updatePageIndicatior(index),
+          ),
+          items: banners.map((url) => ZMRoundedImage(imageUrl: url)).toList(),
         ),
-        //TODO: install CarouselSlider package
-
-        // CarouselSlider(
-        //   options:CarouselOptions(viewportFraction:1,
-        // onPageChanged: (index, _)=> controller.updatePageIndicator(index)
-        // ),
-        //   items:banners.map((url) => RoundedImage(imageUrl: url)).toList(),
-        // ),
         const SizedBox(height: ZMSizes.spaceBtwItems),
         Center(
           child: Obx(
