@@ -28,6 +28,13 @@ class ZMCategoryTabs extends StatelessWidget {
                   ZMImages.productImage1,
                 ],
               ),
+              ZMBrandShowCase(
+                images: [
+                  ZMImages.productImage3,
+                  ZMImages.productImage2,
+                  ZMImages.productImage1,
+                ],
+              ),
               const SizedBox(height: ZMSizes.spaceBtwItems),
 
               //Products

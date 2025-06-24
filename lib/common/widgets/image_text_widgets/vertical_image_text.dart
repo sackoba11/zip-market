@@ -10,7 +10,7 @@ class ZMVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = ZMColors.white,
-    this.backgroundColor = ZMColors.white,
+    this.backgroundColor,
     this.onTap,
   });
   final String image, title;
