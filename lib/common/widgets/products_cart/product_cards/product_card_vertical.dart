@@ -13,8 +13,8 @@ import '../../icons/circular_icon.dart';
 import '../../images/rounded_image.dart';
 import '../../texts/brand_title_text_with_verified_icon.dart';
 
-class ProductCardVertical extends StatelessWidget {
-  const ProductCardVertical({super.key});
+class ZMProductCardVertical extends StatelessWidget {
+  const ZMProductCardVertical({super.key});
 
   @override
   Widget build(BuildContext context) {

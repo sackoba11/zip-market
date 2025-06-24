@@ -73,9 +73,9 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: ZMSizes.spaceBtwItems),
 
                   ///Popular Product
-                  GridLayout(
+                  ZMGridLayout(
                     itemCount: 4,
-                    itemBuilder: (context, index) => ProductCardVertical(),
+                    itemBuilder: (context, index) => ZMProductCardVertical(),
                   ),
                 ],
               ),
