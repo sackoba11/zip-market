@@ -6,8 +6,9 @@ import '../../../utils/constants/image_strings.dart';
 import '../images/circular_image.dart';
 
 class ZMUserProfileTile extends StatelessWidget {
-  const ZMUserProfileTile({super.key});
+  const ZMUserProfileTile({super.key, required this.onPressed});
 
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -30,7 +31,7 @@ class ZMUserProfileTile extends StatelessWidget {
         ).textTheme.bodyMedium!.apply(color: ZMColors.white),
       ),
       trailing: IconButton(
-        onPressed: () {},
+        onPressed: onPressed,
         icon: Icon(Iconsax.edit, color: ZMColors.white),
       ),
     );

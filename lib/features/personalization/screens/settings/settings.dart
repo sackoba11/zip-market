@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:zip_market/common/widgets/appbar/appbar.dart';
 import 'package:zip_market/common/widgets/custom_shapes/containers/primary_header_container.dart';
@@ -8,6 +9,7 @@ import 'package:zip_market/common/widgets/texts/section_heading.dart';
 import '../../../../common/widgets/listt_tile/user_profile_tile.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
+import '../profile/profile.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -32,7 +34,9 @@ class SettingsScreen extends StatelessWidget {
                   ),
 
                   //User Profile Card
-                  ZMUserProfileTile(),
+                  ZMUserProfileTile(
+                    onPressed: () => Get.to(() => const ProfileScreen()),
+                  ),
                   const SizedBox(height: ZMSizes.spaceBtwSections),
                 ],
               ),
