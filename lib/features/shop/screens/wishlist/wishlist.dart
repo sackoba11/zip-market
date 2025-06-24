@@ -33,7 +33,7 @@ class FavoriteScreen extends StatelessWidget {
           child: Column(
             children: [
               ZMGridLayout(
-                itemCount: 4,
+                itemCount: 7,
                 itemBuilder: (_, index) => ZMProductCardVertical(),
               ),
             ],

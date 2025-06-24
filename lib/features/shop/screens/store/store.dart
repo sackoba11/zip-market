@@ -83,7 +83,15 @@ class StoreScreen extends StatelessWidget {
               ),
             ];
           },
-          body: TabBarView(children: [ZMCategoryTabs()]),
+          body: TabBarView(
+            children: [
+              ZMCategoryTabs(),
+              ZMCategoryTabs(),
+              ZMCategoryTabs(),
+              ZMCategoryTabs(),
+              ZMCategoryTabs(),
+            ],
+          ),
         ),
       ),
     );
